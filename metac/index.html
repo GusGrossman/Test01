@@ -1,0 +1,48 @@
+<!DOCTYPE html><!--HIT PLAY TO VIEW PROJECT, This project uses your webcam and mic. click the about button to learn more UTILIZES GENERATIVE DESIGN --><html><head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>06 Painting</title>
+
+  <script type="text/javascript" src="p5.min.js"></script>  <script src="p5.sound.min.js"></script>
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript" src="particle.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <script src="sketch.js"></script>
+
+  <div id="topleft">
+    <a href="https://docs.google.com/document/d/1dupaTKeB2B1dA5kXtV2pCcYUA2Ni-svexGkI_Jxk8FM/edit?usp=sharing">About</a>
+  </div>
+  <div id="topright">
+    <a href="#">Contact</a>
+  </div>
+  <div id="bottomleft">
+    <div>City: <span id="city"></span></div>
+    <div>Country: <span id="country"></span></div>
+    <div>State: <span id="state"></span></div>
+    <div>Latitude: <span id="latitude"></span></div>
+    <div>Longitude: <span id="longitude"></span></div>
+    <div>IP: <span id="ip"></span></div>
+  </div>
+  <script>
+    $.getJSON('https://geolocation-db.com/json/')
+      .done(function(location) {
+        $('#country').html(location.country_name);
+        $('#state').html(location.state);
+        $('#city').html(location.city);
+        $('#latitude').html(location.latitude);
+        $('#longitude').html(location.longitude);
+        $('#ip').html(location.IPv4);
+      });
+  </script>
+
+
+
+
+
+
+</body></html>

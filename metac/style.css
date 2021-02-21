@@ -1,0 +1,58 @@
+@font-face {
+  font-family: hel;
+  src:url(data/hnr.otf);
+}
+html, body {
+  margin: 0;
+  font-family:hel;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+ #bottomleft {
+	position: fixed;
+	bottom:2%;
+	left: 2%;
+	font-size: 16px;
+	z-index: 5;
+	line-height: 15pt;
+   color:white;
+}
+ #bottomright {
+	position: fixed;
+	top:85%;
+	left: 85%;
+	font-size: 16px;
+	z-index: 5;
+	
+     color:white;
+}
+#bottomright iframe {
+  
+  border:none;
+  width:80%;
+  height:1%;
+}
+ #topleft {
+	position: fixed;
+	top:15px;
+	left: 15px;
+	z-index: 5;
+   color:white;
+}
+a {
+  font-size: 16px;
+  color:black;
+  text-decoration:none;
+  color:white;
+}
+a:hover{
+ text-decoration:underline; 
+}
+ #topright {
+	position: fixed;
+	top:15px;
+	right: 15px;
+	z-index: 5;
+}

@@ -1,0 +1,24 @@
+function setup() {
+  createCanvas(200, 100);
+}
+
+function draw() {
+  var currentYear = year();
+  var currentMonth = month();
+  var currentDay = day();
+  var currentHour = hour();
+  var currentMinute = minute();
+  var currentSecond = second();
+  
+  var currentDate = currentYear + '-' + nf(currentMonth, 2) + '-' + nf(currentDay, 2);
+  var currentTime = currentHour + ':' + nf(currentMinute, 2) + ':' + nf(currentSecond, 2);
+  
+  background(32);
+  
+  fill(255);
+  noStroke();
+  textSize(24);
+  
+  text(currentDate, 40, 40);
+  text(currentTime, 40, 70);
+}
